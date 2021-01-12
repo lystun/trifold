@@ -1,0 +1,31 @@
+{
+  "name": "trifold",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/pwa": "^3.0.2",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/toast": "^3.3.1",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6",
+    "nuxt-sweetalert2": "^1.0.0",
+    "swiper": "^6.3.5",
+    "vue-clipboard2": "^0.3.1",
+    "vue-disqus": "^4.0.1",
+    "vue-quill-editor": "^3.0.6",
+    "vue-typed-js": "^0.1.2"
+  },
+  "devDependencies": {
+    "fibers": "^5.0.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0"
+  }
+}
