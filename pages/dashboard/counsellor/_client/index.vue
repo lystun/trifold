@@ -8,7 +8,7 @@
             <div class="card-header pt-4 pb-2">
                 <div class="d-flex align-items-center">
                     <a href="#" class="avatar rounded-circle shadow">
-                        <img alt="Image placeholder" src="~/assets/img/theme/light/team-1-800x800.jpg">
+                        <img alt="Image placeholder" src="~/assets/img/avatars/2.png">
                     </a>
                     <div class="avatar-content">
                         <h6 class="mb-0">Josh Duru</h6>

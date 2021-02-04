@@ -24,10 +24,10 @@
 
                     <div class="card-columns">
                         <div class="card border-0 hover-shadow-lg shadow p-3">
-                            <nuxt-link :to="{ name: 'blog-slug', params: { slug: "red" } }">
+                            <nuxt-link :to="{ name: 'blog-slug'  }">
                                 <img src="https://via.placeholder.com/400x200" class="img-fluid rounded shadow" >
                                 <div class="pt-4 text-muted">
-                                    <small class="text-uppercase">5 days ago </small>
+                                    <small class="text-uppercase">25 days ago </small>
                                     <h5>New Blog Post</h5>
                                     <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe impedit beatae temporibus? Delectus aliquam sit aut consequatur quibusdam eius beatae aliquid corrupti facilis nostrum, possimus voluptatem at sequi doloribus iure. </p>
                                 </div>
