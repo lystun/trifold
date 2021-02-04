@@ -1,0 +1,96 @@
+<template>
+    <div>
+         <section class="slice slice-lg bg-primary">
+            <a href="#sct-call-to-action" class="tongue tongue-up tongue-section-primary" data-scroll-to>
+                <i class="fas fa-angle-up"></i>
+            </a>
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="font-weight-bol text-white mb-5">Get The App</h2>
+
+                        <p class="font-weight-400 text-white">
+                            Your marriage matters to God - as well as to us. With Trifold, your marriage can be heaven on earth.
+                        </p>
+
+                        <div class="mt-5">
+                            <a href="#" class="btn btn-app-store hover-translate-y-n3 mr-lg-4 mb-4">
+                                <i class="fab fa-apple"></i>
+                                <span class="btn-inner--text">Download on the</span>
+                                <span class="btn-inner--brand">App Store</span>
+                            </a>
+                            <a href="#" class="btn btn-app-store hover-translate-y-n3 mb-4">
+                                <i class="fab fa-google-play"></i>
+                                <span class="btn-inner--text">Download on the</span>
+                                <span class="btn-inner--brand">Play Store</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer footer-dark bg-primary text-primary pt-2 pb-2" id="footer-main">
+            <div class="container">
+                <div class="py-4">
+                    <div class="row align-items-md-center">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="d-flex align-items-center">
+                            <p class="text-sm mb-0">Trifold by <a href="https://www.ennovatelab.com" target="_blank" class="font-weight-bold" style="color:#fa8316">Ennovate Lab</a>. All rights reserved &copy; {{ year }} </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mb-4 mb-sm-0">
+                        <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <nuxt-link to="/about" class="nav-link">About</nuxt-link>
+                        </li>
+                        <li class="nav-item">
+                            <nuxt-link to="/privacy" class="nav-link">Privacy</nuxt-link>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.instagram.com/trifold_marriage_app/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://twitter.com/AppTrifold" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://web.facebook.com/The-Trifold-Marriage-App-104671568033784/" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</template>
+
+<script>
+    export default {
+        
+        data(){
+            return{
+                year: new Date().getFullYear(),
+            }
+        },
+
+        created(){
+
+        }
+    }
+</script>
+
+<style>
+
+</style>
