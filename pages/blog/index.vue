@@ -21,10 +21,10 @@
                             <span class="sr-only">Loading...</span>
                         </div>
                     </div>
-
-                    <div class="card-columns">
+                
+                    <!-- <div class="card-columns">
                         <div class="card border-0 hover-shadow-lg shadow p-3">
-                            <nuxt-link :to="{ name: 'blog-slug'  }">
+                            <nuxt-link :to="{ name: 'blog-slug' }">
                                 <img src="https://via.placeholder.com/400x200" class="img-fluid rounded shadow" >
                                 <div class="pt-4 text-muted">
                                     <small class="text-uppercase">25 days ago </small>
@@ -33,11 +33,12 @@
                                 </div>
                             </nuxt-link>
                         </div>
-                    </div>
-                    <!-- <div class="card-columns">
+                    </div> -->
+
+                    <div class="card-columns">
                         <div class="card border-0 hover-shadow-lg shadow p-3" v-for="(post, index) in posts" :key="index">
-                            <nuxt-link :to="{ name: 'blog-slug', params: { slug: post.slug } }">
-                                <img :alt="post.title" :src="post.photo" class="img-fluid rounded shadow" >
+                            <nuxt-link :to="{ name: 'blog-id', params: { id: post.id } }">
+                                <img :alt="post.title" :src="post.image" class="img-fluid rounded shadow" >
                                 <div class="pt-4 text-muted">
                                     <small class="text-uppercase">{{ post.createdAt | formatDate }} </small>
                                     <h5>{{ post.title }}</h5>
@@ -45,7 +46,7 @@
                                 </div>
                             </nuxt-link>
                         </div>
-                    </div> -->
+                    </div>
 
                 </div>
 
@@ -88,7 +89,7 @@
 
         data(){
             return{
-                posts: [],
+
             }
         },
 
@@ -105,19 +106,19 @@
         },
 
         created(){
-            // this.checkPosts();
+            this.checkPosts();
+            // this.getPosts()
         },
 
         methods: {
-            async getPosts(){
-                let { data } = await this.$axios.$get('/posts')
-                this.$store.dispatch('posts/setPosts', data)
-            },
-
             checkPosts(){
-                if(!this.posts){
+                if( Object.entries(this.posts) == 0){
                     this.getPosts();
                 }
+            },
+            async getPosts(){
+                let posts = await this.$axios.$get('/posts')
+                this.$store.dispatch('posts/setPosts', posts.data.data)
             },
 
             truncate(post) {

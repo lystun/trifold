@@ -70,15 +70,11 @@ export default {
         },
     },
 
-    mounted(){
-
-    },
-
     async asyncData({$axios, params}){
-        const {data} = await $axios.$get(`/posts/slug/${params.slug}`)
+        const post = await $axios.$get(`/posts/${params.id}`)
 
         return {
-            post : data.post[0]
+            post : post.data.data
         }
     },
 

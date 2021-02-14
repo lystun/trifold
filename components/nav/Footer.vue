@@ -14,12 +14,12 @@
                         </p>
 
                         <div class="mt-5">
-                            <a href="#" class="btn btn-app-store hover-translate-y-n3 mr-lg-4 mb-4">
+                            <a href="https://mandrillapp.com/track/click/31095621/api.codemagic.io?p=eyJzIjoialMzSlNUR3Jwd1drZGtvSUNoTFg1WWVpaW9RIiwidiI6MSwicCI6IntcInVcIjozMTA5NTYyMSxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2FwaS5jb2RlbWFnaWMuaW9cXFwvYXJ0aWZhY3RzXFxcLzhmY2FmYTFjLTE2YWYtNDY2NC1hYWJlLWQyZjVlYWM5OGY3MFxcXC83ZTMwODkzZS05MDU5LTQzNDMtYjIwMS1hMzllZjg4MWU5NmVcXFwvYXBwLWRlYnVnLmFwa1wiLFwiaWRcIjpcImFmMWIzZjNhNTZiODQ0NmM5MjE3OTNiNmFiYmE1NjNhXCIsXCJ1cmxfaWRzXCI6W1wiMGM4YzJjODEyZWJiMTYwMjIwNzIyM2I1YTA0M2MyMDAyODI2MDQ3NFwiXX0ifQ" class="btn btn-app-store hover-translate-y-n3 mr-lg-4 mb-4">
                                 <i class="fab fa-apple"></i>
                                 <span class="btn-inner--text">Download on the</span>
                                 <span class="btn-inner--brand">App Store</span>
                             </a>
-                            <a href="#" class="btn btn-app-store hover-translate-y-n3 mb-4">
+                            <a href="https://mandrillapp.com/track/click/31095621/api.codemagic.io?p=eyJzIjoialMzSlNUR3Jwd1drZGtvSUNoTFg1WWVpaW9RIiwidiI6MSwicCI6IntcInVcIjozMTA5NTYyMSxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2FwaS5jb2RlbWFnaWMuaW9cXFwvYXJ0aWZhY3RzXFxcLzhmY2FmYTFjLTE2YWYtNDY2NC1hYWJlLWQyZjVlYWM5OGY3MFxcXC83ZTMwODkzZS05MDU5LTQzNDMtYjIwMS1hMzllZjg4MWU5NmVcXFwvYXBwLWRlYnVnLmFwa1wiLFwiaWRcIjpcImFmMWIzZjNhNTZiODQ0NmM5MjE3OTNiNmFiYmE1NjNhXCIsXCJ1cmxfaWRzXCI6W1wiMGM4YzJjODEyZWJiMTYwMjIwNzIyM2I1YTA0M2MyMDAyODI2MDQ3NFwiXX0ifQ" class="btn btn-app-store hover-translate-y-n3 mb-4">
                                 <i class="fab fa-google-play"></i>
                                 <span class="btn-inner--text">Download on the</span>
                                 <span class="btn-inner--brand">Play Store</span>

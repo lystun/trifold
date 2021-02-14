@@ -16,16 +16,16 @@
                                     <h2 class="text-white mb-4 typed">  <span class="typing"></span></h2>
                                 </vue-typed-js>
                                 <p class="lead lh-180 text-white">
-                                    Trifold is an all-encompassing marriage app that gives you faith-based curated answers to prevailing issues such as; finances, parenting, sex and intimacy, and other marital questions; all at your fingertips.
+                                    Trifold is an all-encompassing marriage app that gives you curated faith-based answers to prevailing issues such as; finances, parenting, sex and intimacy, and other marital questions; all at your fingertips.
                                 </p>
 
                                 <div class="mt-5">
-                                    <a href="#" class="btn btn-app-store hover-translate-y-n3 mr-lg-4 mb-4">
+                                    <a href="https://mandrillapp.com/track/click/31095621/api.codemagic.io?p=eyJzIjoialMzSlNUR3Jwd1drZGtvSUNoTFg1WWVpaW9RIiwidiI6MSwicCI6IntcInVcIjozMTA5NTYyMSxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2FwaS5jb2RlbWFnaWMuaW9cXFwvYXJ0aWZhY3RzXFxcLzhmY2FmYTFjLTE2YWYtNDY2NC1hYWJlLWQyZjVlYWM5OGY3MFxcXC83ZTMwODkzZS05MDU5LTQzNDMtYjIwMS1hMzllZjg4MWU5NmVcXFwvYXBwLWRlYnVnLmFwa1wiLFwiaWRcIjpcImFmMWIzZjNhNTZiODQ0NmM5MjE3OTNiNmFiYmE1NjNhXCIsXCJ1cmxfaWRzXCI6W1wiMGM4YzJjODEyZWJiMTYwMjIwNzIyM2I1YTA0M2MyMDAyODI2MDQ3NFwiXX0ifQ" class="btn btn-app-store hover-translate-y-n3 mr-lg-4 mb-4">
                                         <i class="fab fa-apple"></i>
                                         <span class="btn-inner--text">Download on the</span>
                                         <span class="btn-inner--brand">App Store</span>
                                     </a>
-                                    <a href="#" class="btn btn-app-store hover-translate-y-n3 mb-4">
+                                    <a href="https://mandrillapp.com/track/click/31095621/api.codemagic.io?p=eyJzIjoialMzSlNUR3Jwd1drZGtvSUNoTFg1WWVpaW9RIiwidiI6MSwicCI6IntcInVcIjozMTA5NTYyMSxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2FwaS5jb2RlbWFnaWMuaW9cXFwvYXJ0aWZhY3RzXFxcLzhmY2FmYTFjLTE2YWYtNDY2NC1hYWJlLWQyZjVlYWM5OGY3MFxcXC83ZTMwODkzZS05MDU5LTQzNDMtYjIwMS1hMzllZjg4MWU5NmVcXFwvYXBwLWRlYnVnLmFwa1wiLFwiaWRcIjpcImFmMWIzZjNhNTZiODQ0NmM5MjE3OTNiNmFiYmE1NjNhXCIsXCJ1cmxfaWRzXCI6W1wiMGM4YzJjODEyZWJiMTYwMjIwNzIyM2I1YTA0M2MyMDAyODI2MDQ3NFwiXX0ifQ" class="btn btn-app-store hover-translate-y-n3 mb-4">
                                         <i class="fab fa-google-play"></i>
                                         <span class="btn-inner--text">Download on the</span>
                                         <span class="btn-inner--brand">Play Store</span>
@@ -71,7 +71,7 @@
                     <h3 class="text-primary mt-4">App Features</h3>
                     <div class="fluid-paragraph mt-3">
                         <p class="lead lh-180 text-primary">
-                            Trifold is a one-stop for marriage-related solution, tastefully designed with an amazing experience.
+                            The Trifold app is a one-stop digital space for marriage-related solutions. It is tastefully designed with an amazing experience.
                         </p>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="icon-text">
                             <h5 class="text-primary">Curated Contents</h5>
-                            <p class="mb-0 text-primary">You get over a thousand curated articles on marriage, relationships, parenting, finances, sex and intimacy, and so much more </p>
+                            <p class="mb-0 text-primary">You get over a thousand curated articles on marriage, relationships, parenting, finances, sex and intimacy, and so much more. </p>
                         </div>
                         </div>
                         <div class="d-flex align-items-start">
