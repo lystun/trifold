@@ -336,7 +336,7 @@
 
         data(){
             return {
-                promises: ['Love. Beauty. Harmony.', 'Friendship. Adventure. Joy.', 'Rekindled Passion. Fulfilment. Peace.', 'Excitment. Godly Offspring. Heaven on Earth.', 'A Three-fold Cord is not Easily Broken.']
+                promises: ['Love. Beauty. Harmony.', 'Friendship. Adventure. Joy.', 'Rekindled Passion. Fulfilment. Peace.', 'Excitement. Godly Offspring. Heaven on Earth.', 'A Three-fold Cord is not Easily Broken.']
             }
         },
 
