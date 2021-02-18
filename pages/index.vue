@@ -1,11 +1,11 @@
 <template>
     <div class="main-content">
         <!-- Hero -->
-        <section class="slice slice-lg bg-gradient-primary header-main" data-offset-top="#header-main">
-            <div class="container py-6 py-lg-0 d-flex align-items-center position-relative zindex-100">
+        <section class="slice slice-lg bg-gradient-primary header-main header vh-100 align-items-center">
+            <div class="container d-flex align-items-center position-relative zindex-100">
                 <div class="col">
                     <div class="row">
-                        <div class="col-lg-6 align-self-center">
+                        <div class="col-lg-6 align-self-center header__info">
                             <div class="text-center text-lg-left pb-5">
                                 <vue-typed-js 
                                     :strings="promises"
@@ -20,12 +20,12 @@
                                 </p>
 
                                 <div class="mt-5">
-                                    <a href="https://mandrillapp.com/track/click/31095621/api.codemagic.io?p=eyJzIjoialMzSlNUR3Jwd1drZGtvSUNoTFg1WWVpaW9RIiwidiI6MSwicCI6IntcInVcIjozMTA5NTYyMSxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2FwaS5jb2RlbWFnaWMuaW9cXFwvYXJ0aWZhY3RzXFxcLzhmY2FmYTFjLTE2YWYtNDY2NC1hYWJlLWQyZjVlYWM5OGY3MFxcXC83ZTMwODkzZS05MDU5LTQzNDMtYjIwMS1hMzllZjg4MWU5NmVcXFwvYXBwLWRlYnVnLmFwa1wiLFwiaWRcIjpcImFmMWIzZjNhNTZiODQ0NmM5MjE3OTNiNmFiYmE1NjNhXCIsXCJ1cmxfaWRzXCI6W1wiMGM4YzJjODEyZWJiMTYwMjIwNzIyM2I1YTA0M2MyMDAyODI2MDQ3NFwiXX0ifQ" class="btn btn-app-store hover-translate-y-n3 mr-lg-4 mb-4">
+                                    <a href="#cta" type="button" class="btn btn-app-store hover-translate-y-n3 mr-lg-4 mb-4" data-toggle="modal" data-target="#staticBackdrop">
                                         <i class="fab fa-apple"></i>
                                         <span class="btn-inner--text">Download on the</span>
                                         <span class="btn-inner--brand">App Store</span>
                                     </a>
-                                    <a href="https://mandrillapp.com/track/click/31095621/api.codemagic.io?p=eyJzIjoialMzSlNUR3Jwd1drZGtvSUNoTFg1WWVpaW9RIiwidiI6MSwicCI6IntcInVcIjozMTA5NTYyMSxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2FwaS5jb2RlbWFnaWMuaW9cXFwvYXJ0aWZhY3RzXFxcLzhmY2FmYTFjLTE2YWYtNDY2NC1hYWJlLWQyZjVlYWM5OGY3MFxcXC83ZTMwODkzZS05MDU5LTQzNDMtYjIwMS1hMzllZjg4MWU5NmVcXFwvYXBwLWRlYnVnLmFwa1wiLFwiaWRcIjpcImFmMWIzZjNhNTZiODQ0NmM5MjE3OTNiNmFiYmE1NjNhXCIsXCJ1cmxfaWRzXCI6W1wiMGM4YzJjODEyZWJiMTYwMjIwNzIyM2I1YTA0M2MyMDAyODI2MDQ3NFwiXX0ifQ" class="btn btn-app-store hover-translate-y-n3 mb-4">
+                                    <a href="#cta" type="button" class="btn btn-app-store hover-translate-y-n3 mb-4" data-toggle="modal" data-target="#staticBackdrop">
                                         <i class="fab fa-google-play"></i>
                                         <span class="btn-inner--text">Download on the</span>
                                         <span class="btn-inner--brand">Play Store</span>
@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 ml-lg-auto align-self-end">
+                        <div class="col-lg-4 ml-lg-auto header__img">
                             <div class="position-relative" style="z-index: 10;">
                                 <img alt="Image placeholder" src="~/assets/img/mockup.png" class="img-fluid img-center">
                             </div>
@@ -41,14 +41,14 @@
                     </div>
                 </div>
             </div>
-            <div class="shape-container" data-shape-position="bottom" style="height: 261.656px;">
+            <!-- <div class="shape-container" data-shape-position="bottom" style="height: 261.656px;">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 220" preserveAspectRatio="none" class="ie-shape-wave-3">
                     <path d="M918.34,99.41C388.23,343.6,47.11,117.12,0,87.54V220H1600V87.54C1378.72-76.71,1077.32,27.41,918.34,99.41Z"></path>
                 </svg>
-            </div>
+            </div> -->
         </section>
 
-         <section class="slice slice-xl overflow-hidden">
+         <section class="slice slice-lg overflow-hidden">
             <div class="bg-absolute-cover bg-size--contain d-flex align-items-center">
                 <figure class="w-100">
                     <img alt="Image placeholder" src="~/assets/img/backgrounds-use/bg-new.svg" class="svg-inject">
@@ -66,7 +66,7 @@
 
         <!-- App Features -->
         <section class="slice slice-lg bg-translucent-primary">
-            <div class="container">
+            <div class="container features">
                 <div class="mb-7 text-center">
                     <h3 class="text-primary mt-4">App Features</h3>
                     <div class="fluid-paragraph mt-3">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="row row-grid align-items-center">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 features__list">
                         <div class="d-flex align-items-start mb-5">
                         <div class="pr-4">
                             <div class="icon icon-shape bg-white text-primary box-shadow-3 rounded-circle">
@@ -111,12 +111,12 @@
                         </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 m-auto">
+                    <div class="col-lg-3 features__img m-auto">
                         <div class="position-relative" style="z-index: 10;">
                         <img alt="Image placeholder" src="~/assets/img/mockup1.png" class="img-center img-fluid">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 features__list">
                         <div class="d-flex align-items-start mb-5">
                         <div class="pr-4">
                             <div class="icon icon-shape bg-white text-primary box-shadow-3 rounded-circle">
@@ -161,7 +161,7 @@
                 <div class="mb-5 text-center">
                     <h3 class="mt-4">Testimonials</h3>
                     <div class="fluid-paragraph mt-3">
-                        <p class="lead lh-180">We are truly excited about our services and hope to get our product into as many hands as possible. Read the testimonials from our happy clients.</p>
+                        <p class="lead lh-180">Your marriage matters to God as well as to us; it can be heaven on earth. Our users believe so. Here is what some of them are saying.</p>
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -244,9 +244,9 @@
         <section class="slice slice-lg bg-translucent-primary">
             <div class="container">
                 <div class="mb-7 text-center">
-                    <h3 class="mt-4">Helpful answers</h3>
+                    <h3 class="mt-4">FAQs</h3>
                     <div class="fluid-paragraph mt-3">
-                        <p class="lead lh-180">Start building fast, beautiful and modern looking websites in no time using our theme.</p>
+                        <p class="lead lh-180">Here are common questions users of Trifold ask and helpful answers to each of them.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -327,6 +327,41 @@
                 </div>
             </div>
         </section>
+
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div>
+                            <h6 class="modal-title mb-1" id="staticBackdropLabel">Join our Waiting List.</h6>
+                            <small>You'll recieve a mail notification when we launch.</small>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form" @submit.prevent="submit">
+                            <div class="form-group">
+                                <label for="name" class="form-label font-weight-bold">Name:</label>
+                                <input type="text" v-model="form.name" class="form-control" id="name" placeholder="Please enter Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label font-weight-bold">Email:</label>
+                                <input type="email" v-model="form.email" class="form-control" id="email" placeholder="Please enter Email">
+                            </div>
+                            <div class="mt-4 text-right">
+                                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-sm btn-primary">
+                                    <span class="fas fa-spinner fa-spin" v-if="loading"></span>
+                                    Join List
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -336,9 +371,33 @@
 
         data(){
             return {
+                loading: false,
+                form : {
+                    name: '',
+                    email: ''
+                },
                 promises: ['Love. Beauty. Harmony.', 'Friendship. Adventure. Joy.', 'Rekindled Passion. Fulfilment. Peace.', 'Excitement. Godly Offspring. Heaven on Earth.', 'A Three-fold Cord is not Easily Broken.']
             }
         },
+
+        methods:{
+
+            async submit(){
+                this.loading = true
+
+                try {
+                    const subscriber = await this.$axios.$post('/subscribers', this.form)
+
+                    this.$toast.success('Thanks for Joining!', {
+                        icon : 'check',
+                    })
+                    
+                } catch (error) {
+                    this.loading = false
+                    console.log(error);
+                }
+            }
+        }
 
     }
 </script>
@@ -346,8 +405,57 @@
 <style lang="scss" scoped>
     .header-main {
         .typed {
-            // font-size: 3rem;
             font-weight: bold;
         }
     }
+
+    .header {
+        .container{
+            margin: 5rem auto;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .header{
+            &__img{
+                display: none;
+            }
+        }
+
+        .features{
+            &__img{
+                display: none;
+            }
+        }
+    }
+       
+    @media screen and (min-width: 576px) and (max-width: 767px){
+        .header{
+            &__img{
+                display: none;
+            }
+        }
+
+        .features{
+            &__img{
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px){
+        .header{
+            &__img{
+                display: none;
+            }
+        }
+
+        .features{
+            &__img{
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1200px){}
 </style>
