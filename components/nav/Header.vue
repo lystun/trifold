@@ -9,7 +9,7 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <nuxt-link class="nav-link nuxt-link-active exact" to="/" >Home</nuxt-link>
+                        <nuxt-link class="nav-link nuxt-link-active exact d-none d-lg-inline-flex" to="/" >Home</nuxt-link>
                     </li>
                     <li class="nav-item">
                         <nuxt-link class="nav-link nuxt-link-active exact" to="/about" >About</nuxt-link>
@@ -75,10 +75,8 @@
         .header {
 
         .navbar-nav {
-            display: flex;
-            padding-left: 0;
-            margin-bottom: 0;
-            list-style: none;
+            flex-direction: row;
+            align-items: flex-start;
 
             .nav-link {
 

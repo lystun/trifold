@@ -5,7 +5,7 @@
             <div class="container d-flex align-items-center position-relative zindex-100">
                 <div class="col">
                     <div class="row">
-                        <div class="col-lg-6 align-self-center header__info">
+                        <div class="col-lg-7 col-xl-6 align-self-center header__info">
                             <div class="text-lg-left pb-5">
                                 <vue-typed-js 
                                     :strings="promises"
