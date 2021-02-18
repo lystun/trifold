@@ -15,11 +15,11 @@
                     <form role="form" @submit.prevent="submit">
                         <div class="form-group">
                             <label for="name" class="form-label font-weight-bold">Name:</label>
-                            <input type="text" v-model="form.name" class="form-control" id="name" placeholder="Please enter Name">
+                            <input type="text" v-model="form.name" class="form-control" id="name" placeholder="Please enter Name" required>
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label font-weight-bold">Email:</label>
-                            <input type="email" v-model="form.email" class="form-control" id="email" placeholder="Please enter Email">
+                            <input type="email" v-model="form.email" class="form-control" id="email" placeholder="Please enter Email" required>
                         </div>
                         <div class="mt-4 text-right">
                             <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
@@ -56,13 +56,23 @@
 
                     const subscriber = await this.$axios.$post('/subscribers', this.form)
 
-                    this.$toast.success('Thanks for Joining!', {
-                        icon : 'check',
-                    })
+                    if(subscriber){
+                        this.$toast.success('Successful! Thanks for Joining.', {
+                            icon : 'check',
+                        })
+                    }else{
+                        this.$toast.error('Faield to submit!', {
+                            icon : 'times-circle',
+                        })
+                        
+                    }
+
+                    this.form = ""
+                    $('#staticBackdrop').modal('hide')
+
                     
                 } catch (error) {
                     this.loading = false
-                    console.log(error);
                 }
             }
         }
