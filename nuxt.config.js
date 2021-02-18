@@ -11,7 +11,6 @@ export default {
 
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
-            // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
             { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' },
             { rel: 'stylesheet', href:"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@400;700&display=swap"},
         ],
@@ -77,8 +76,8 @@ export default {
     
     // Axios module configuration (https://go.nuxtjs.dev/config-axios)
     axios: {
-        // baseURL : "https://trifold-api.herokuapp.com/api/v1/",
-        baseURL : "http://127.0.0.1:8080/api/v1/"
+        baseURL : "https://trifold-api.herokuapp.com/api/v1/",
+        // baseURL : "http://127.0.0.1:8080/api/v1/"
     },
 
     auth: {

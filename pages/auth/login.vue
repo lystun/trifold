@@ -6,7 +6,7 @@
                 <p class="text-muted mb-0">Sign in to your account to continue </p>
             </div>
             <span class="clearfix"></span>
-            <form role="form" @submit.prevent="submit">
+            <form @submit.prevent="submit">
                 <div class="form-group">
                     <label class="form-control-label">Email address</label>
                     <div class="input-group input-group-merge">
