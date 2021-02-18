@@ -3,16 +3,17 @@
         <!-- Main navbar -->
         <nav class="navbar navbar-main navbar-expand-lg navbar-transparent" id="navbar-main">
             <div class="container px-lg-0">
-                <!-- Logo -->
                 <nuxt-link class="navbar-brand mr-lg-5" to="/">
                     <img alt="Trifold" src="/logo.png" id="navbar-logo" style="height: 50px;">
                 </nuxt-link>
-                <!-- Navbar collapse trigger -->
-                <button class="navbar-toggler pr-0" type="button" data-toggle="collapse" data-target="#navbar-main-collapse"
-                    aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+
+                <button class="navbar-toggler pr-0" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- Navbar nav -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <div class="collapse navbar-collapse" id="navbar-main-collapse">
                     <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                         <li class="nav-item d-lg-none d-xl-block">

@@ -1,7 +1,7 @@
 <template>
     <div class="main-content">
         <!-- Hero -->
-        <section class="slice slice-lg bg-gradient-primary header-main header vh-100 align-items-center">
+        <section class="slice slice-lg bg-gradient-primary header-main header align-items-center">
             <div class="container d-flex align-items-center position-relative zindex-100">
                 <div class="col">
                     <div class="row">
@@ -410,6 +410,9 @@
     }
 
     .header {
+        
+        height: 100vh;
+
         .container{
             margin: 5rem auto;
         }
@@ -417,6 +420,13 @@
 
     @media screen and (max-width: 576px) {
         .header{
+
+            height: 100vh;
+
+            .container{
+                margin: 7rem auto 3rem;
+            }
+
             &__img{
                 display: none;
             }
@@ -458,4 +468,12 @@
     }
 
     @media screen and (min-width: 992px) and (max-width: 1200px){}
+    @media screen and (min-width: 1200px) and (max-width: 1920px){
+        .header{
+            .container{
+                margin: 2rem auto 1rem;
+            }
+        }
+    }
+
 </style>
