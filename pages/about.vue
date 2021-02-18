@@ -43,8 +43,15 @@
 </template>
 
 <script>
+    import Subscriber from "../components/utils/SubscriberModal";
+
     export default {
         layout:'pages',
+        
+        components: {
+            Subscriber
+        },
+
         data(){
             return {
 

@@ -6,7 +6,7 @@
                 <div class="col">
                     <div class="row">
                         <div class="col-lg-6 align-self-center header__info">
-                            <div class="text-center text-lg-left pb-5">
+                            <div class="text-lg-left pb-5">
                                 <vue-typed-js 
                                     :strings="promises"
                                     :typeSpeed="100"
@@ -48,15 +48,15 @@
             </div> -->
         </section>
 
-         <section class="slice slice-lg overflow-hidden">
+        <section class="slice slice-lg overflow-hidden">
             <div class="bg-absolute-cover bg-size--contain d-flex align-items-center">
                 <figure class="w-100">
-                    <img alt="Image placeholder" src="~/assets/img/backgrounds-use/bg-new.svg" class="svg-inject">
+                    <img alt="" src="~/assets/img/backgrounds-use/bg-new.svg" class="svg-inject">
                 </figure>
             </div>
-            <div class="container position-relative zindex-100 mt-6">
-                <div class="text-center">
-                    <h1 class="text-whit">Our Belief</h1>
+            <div class="container position-relative zindex-100 mt-lg-6">
+                <div class="text-left text-md-center">
+                    <h1 class="text-center">Our Belief</h1>
                     <div class="mt-4">
                         <p class="lead text-whit lh-180">That marriage is a spiritual union rooted in God, our Father. Therefore, a proper understanding of how it ought to work will bring the happiness, peace, and fulfillment God intends for this type of union; thereby furthering the Father's will on earth. Your marriage matters to God - as well as to us. With Trifold, your marriage can be heaven on earth.</p>
                     </div>
@@ -159,7 +159,7 @@
         <section class="slice slice-lg">
             <div class="container">
                 <div class="mb-5 text-center">
-                    <h3 class="mt-4">Testimonials</h3>
+                    <h3 class="mt-lg-4">Testimonials</h3>
                     <div class="fluid-paragraph mt-3">
                         <p class="lead lh-180">Your marriage matters to God as well as to us; it can be heaven on earth. Our users believe so. Here is what some of them are saying.</p>
                     </div>
@@ -243,8 +243,8 @@
         <!-- FAQs -->
         <section class="slice slice-lg bg-translucent-primary">
             <div class="container">
-                <div class="mb-7 text-center">
-                    <h3 class="mt-4">FAQs</h3>
+                <div class="mb-lg-7 mb-5 text-center">
+                    <h3 class="mt-lg-4">FAQs</h3>
                     <div class="fluid-paragraph mt-3">
                         <p class="lead lh-180">Here are common questions users of Trifold ask and helpful answers to each of them.</p>
                     </div>
@@ -328,76 +328,29 @@
             </div>
         </section>
 
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div>
-                            <h6 class="modal-title mb-1" id="staticBackdropLabel">Join our Waiting List.</h6>
-                            <small>You'll recieve a mail notification when we launch.</small>
-                        </div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form role="form" @submit.prevent="submit">
-                            <div class="form-group">
-                                <label for="name" class="form-label font-weight-bold">Name:</label>
-                                <input type="text" v-model="form.name" class="form-control" id="name" placeholder="Please enter Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label font-weight-bold">Email:</label>
-                                <input type="email" v-model="form.email" class="form-control" id="email" placeholder="Please enter Email">
-                            </div>
-                            <div class="mt-4 text-right">
-                                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-sm btn-primary">
-                                    <span class="fas fa-spinner fa-spin" v-if="loading"></span>
-                                    Join List
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Subscriber />
+        
     </div>
 </template>
 
 <script>
+    import Subscriber from "../components/utils/SubscriberModal";
+
     export default {
         layout:'pages',
 
+        components: {
+            Subscriber
+        },
+
         data(){
             return {
-                loading: false,
-                form : {
-                    name: '',
-                    email: ''
-                },
+                
                 promises: ['Love. Beauty. Harmony.', 'Friendship. Adventure. Joy.', 'Rekindled Passion. Fulfilment. Peace.', 'Excitement. Godly Offspring. Heaven on Earth.', 'A Three-fold Cord is not Easily Broken.']
             }
         },
 
-        methods:{
-
-            async submit(){
-                this.loading = true
-
-                try {
-                    const subscriber = await this.$axios.$post('/subscribers', this.form)
-
-                    this.$toast.success('Thanks for Joining!', {
-                        icon : 'check',
-                    })
-                    
-                } catch (error) {
-                    this.loading = false
-                    console.log(error);
-                }
-            }
-        }
+   
 
     }
 </script>
@@ -421,10 +374,10 @@
     @media screen and (max-width: 576px) {
         .header{
 
-            height: 100vh;
+            height: 90vh;
 
             .container{
-                margin: 7rem auto 3rem;
+                margin: 5rem auto 3rem;
             }
 
             &__img{
@@ -437,6 +390,7 @@
                 display: none;
             }
         }
+
     }
        
     @media screen and (min-width: 576px) and (max-width: 767px){
