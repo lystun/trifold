@@ -77,8 +77,8 @@ export default {
     
     // Axios module configuration (https://go.nuxtjs.dev/config-axios)
     axios: {
-        baseURL : "https://trifold-api.herokuapp.com/api/v1/",
-        // baseURL : "http://127.0.0.1:8080/api/v1/"
+        // baseURL : "https://trifold-api.herokuapp.com/api/v1/",
+        baseURL : "http://127.0.0.1:8080/api/v1/"
     },
 
     auth: {

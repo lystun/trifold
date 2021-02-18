@@ -72,6 +72,12 @@
                     
                     let destination;
 
+                    if(!user){
+                        this.$router.push({ 
+                            path: '/auth/login'
+                        });
+                    }
+
                     if(user.data.role == 'counsellor'){
                         destination = '/dashboard/counsellor'
                     }else if(user.data.role == 'admin' ){

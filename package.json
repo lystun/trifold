@@ -1,6 +1,7 @@
 {
-  "name": "trifold",
+  "name": "Trifold",
   "version": "1.0.0",
+  "description": "Trifold is an all-encompassing marriage app that gives you faith-based curated answers to prevailing marital issues",
   "private": true,
   "scripts": {
     "dev": "nuxt",
