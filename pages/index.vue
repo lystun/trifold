@@ -19,16 +19,20 @@
                                     Trifold is an all-encompassing marriage app that gives you curated faith-based answers to prevailing issues such as; finances, parenting, sex and intimacy, and other marital questions; all at your fingertips.
                                 </p>
 
-                                <div class="mt-5">
-                                    <a href="#cta" type="button" class="btn btn-app-store hover-translate-y-n3 mr-lg-4 mb-4" data-toggle="modal" data-target="#staticBackdrop">
+                                <div class="mt-5 ctas">
+                                    <a href="#cta" type="button" class="btn download hover-translate-y-n3 mr-lg-4 mb-4" data-toggle="modal" data-target="#staticBackdrop">
                                         <i class="fab fa-apple"></i>
-                                        <span class="btn-inner--text">Download on the</span>
-                                        <span class="btn-inner--brand">App Store</span>
+                                        <div class="btn-inner">
+                                            <span class="btn-inner--text">Download on the</span>
+                                            <span class="btn-inner--brand">App Store</span>
+                                        </div>
                                     </a>
-                                    <a href="#cta" type="button" class="btn btn-app-store hover-translate-y-n3 mb-4" data-toggle="modal" data-target="#staticBackdrop">
+                                    <a href="#cta" type="button" class="btn download hover-translate-y-n3 mb-4" data-toggle="modal" data-target="#staticBackdrop">
                                         <i class="fab fa-google-play"></i>
-                                        <span class="btn-inner--text">Download on the</span>
-                                        <span class="btn-inner--brand">Play Store</span>
+                                        <div class="btn-inner">
+                                            <span class="btn-inner--text">Download on the</span>
+                                            <span class="btn-inner--brand">Play Store</span>
+                                        </div>
                                     </a>
                                 </div>
                             </div>
@@ -43,12 +47,8 @@
             </div>
         </section>
 
-        <section class="slice slice-lg overflow-hidden">
-            <div class="bg-absolute-cover bg-size--contain d-flex align-items-center">
-                <figure class="w-100">
-                    <img alt="" src="~/assets/img/backgrounds-use/bg-new.svg" class="svg-inject">
-                </figure>
-            </div>
+        <section class="slice slice-lg belief overflow-hidden">
+            
             <div class="container position-relative zindex-100 mt-lg-6">
                 <div class="text-left text-md-center">
                     <h1 class="text-center">Our Belief</h1>
@@ -151,7 +151,7 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="slice slice-lg">
+        <section class="slice slice-lg testimonials">
             <div class="container">
                 <div class="mb-5 text-center">
                     <h3 class="mt-lg-4">Testimonials</h3>
@@ -351,6 +351,7 @@
 </script>
 
 <style lang="scss" scoped>
+
     .header-main {
         .typed {
             font-weight: bold;
@@ -363,16 +364,90 @@
 
         .container{
             margin: 5rem auto;
+
+            .ctas {
+
+                display: flex;
+
+                .download {
+                    display: flex;
+                    background: #000;
+                    color: #fff;
+
+                    .fab {
+                        font-size: 2.5rem;
+                        display: block;
+                        padding-right: 1rem;
+                    }
+
+                    .btn-inner{
+                        &--text{
+                            display: block;
+                            font-size: .75rem;
+                            line-height: .75rem;
+                            margin-bottom: .125rem;
+                        }
+                        &--brand {
+                            display: block;
+                            text-align: left;
+                            font-size: 21px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    .belief {
+        background: url('../assets/img/pattern_3.png') repeat;
+    }
+
+    .testimonials {
+        background: url('../assets/img/pattern_3.png') repeat;
     }
 
     @media screen and (max-width: 576px) {
         .header{
 
-            height: 90vh;
+            height: auto;
 
             .container{
                 margin: 5rem auto 3rem;
+
+                .ctas {
+
+                    display: inline-block;
+                    text-align: center;
+                    width: 100%;
+
+                    .download {
+                        display: flex;
+                        margin: 0 auto;
+                        justify-content: center;
+                        text-align: center;
+
+                        .fab {
+                            font-size: 2.5rem;
+                            display: block;
+                        }
+
+                        .btn-inner{
+                            &--text{
+                                display: block;
+                                font-size: .75rem;
+                                line-height: .75rem;
+                                margin-bottom: .125rem;
+                            }
+                            &--brand {
+                                display: block;
+                                text-align: left;
+                                font-size: 21px;
+                                line-height: 21px;
+                            }
+                        }
+                    }
+                }
             }
 
             &__img{
@@ -390,6 +465,7 @@
        
     @media screen and (min-width: 576px) and (max-width: 767px){
         .header{
+            height: auto;
             &__img{
                 display: none;
             }
