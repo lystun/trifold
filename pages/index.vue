@@ -48,7 +48,6 @@
         </section>
 
         <section class="slice slice-lg belief overflow-hidden">
-            
             <div class="container position-relative zindex-100 mt-lg-6">
                 <div class="text-left text-md-center">
                     <h1 class="text-center">Our Belief</h1>
@@ -261,7 +260,7 @@
                             <!-- Accordion card 2 -->
                             <div class="card">
                                 <div class="card-header py-4" id="heading-1-2" data-toggle="collapse" role="button" data-target="#collapse-1-2" aria-expanded="false" aria-controls="collapse-1-2">
-                                <h6 class="mb-0"><i class="fas fa-question mr-3"></i>Can my partner/lover see what I do on the app?</h6>
+                                <h6 class="mb-0"><i class="fas fa-question mr-3"></i>Can my partner/spouse see what I do on the app?</h6>
                                 </div>
                                 <div id="collapse-1-2" class="collapse" aria-labelledby="heading-1-2" data-parent="#accordion-1">
                                 <div class="card-body">
@@ -324,7 +323,6 @@
         </section>
 
         <Subscriber />
-        
     </div>
 </template>
 

@@ -22,19 +22,6 @@
                         </div>
                     </div>
                 
-                    <!-- <div class="card-columns">
-                        <div class="card border-0 hover-shadow-lg shadow p-3">
-                            <nuxt-link :to="{ name: 'blog-slug' }">
-                                <img src="https://via.placeholder.com/400x200" class="img-fluid rounded shadow" >
-                                <div class="pt-4 text-muted">
-                                    <small class="text-uppercase">25 days ago </small>
-                                    <h5>New Blog Post</h5>
-                                    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe impedit beatae temporibus? Delectus aliquam sit aut consequatur quibusdam eius beatae aliquid corrupti facilis nostrum, possimus voluptatem at sequi doloribus iure. </p>
-                                </div>
-                            </nuxt-link>
-                        </div>
-                    </div> -->
-
                     <div class="card-columns">
                         <div class="card border-0 hover-shadow-lg shadow p-3" v-for="(post, index) in posts" :key="index">
                             <nuxt-link :to="{ name: 'blog-id', params: { id: post.id } }">
@@ -71,15 +58,21 @@
                 </div> -->
             </div>
         </section>
+
+        <Subscriber />
     </div>
 </template>
 
-<script>
-    
+<script>    
+    import Subscriber from "../../components/utils/SubscriberModal";
     import { mapGetters } from "vuex";
 
     export default {
         layout:'pages',
+
+        components: {
+            Subscriber
+        },
 
         head(){
             return{
