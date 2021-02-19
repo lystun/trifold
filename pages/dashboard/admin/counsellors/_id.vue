@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-12 mx-auto">
                     <div class="mt-2 mb-4">
-                        <h4>Edit Article</h4>
+                        <h4>Edit Counsellor</h4>
                     </div>
                     
                     <form @submit.prevent="create" class="article__form">
@@ -33,39 +33,6 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12 mb-2">
-                                <div class="form-group">
-                                    <label class="form-control-label">Article Image</label>
-                                    <input class="form-control" type="file" ref="image"
-                                    @change="uploadImage" :class="{'is-invalid': imageErr }" >
-                                    <div class="invalid-feedback">{{ this.imageErr }} </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 mb-2">
-                                <div class="form-group">
-                                    <label class="form-control-label">Article Nudge</label>
-                                    <input class="form-control" v-model="form.nudge" type="text" placeholder="Article Nudge" required>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 mb-2">
-                                <div class="form-group">
-                                    <label for="form-control-label">Article Content</label>
-                                    <div class="quill-editor" required
-                                        :content="form.content"
-                                        v-quill:myQuillEditor="editorOption"
-                                        @change="onEditorChange($event)" >
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-auto ml-auto">
-                                <button type="submit" class="btn btn-sm hover-translate-y-n3">
-                                    <span class="fas fa-spinner fa-spin mr-2" v-if="loading"></span>
-                                    Edit Article
-                                </button>
-                            </div>
                         </div>
                     </form>
                 </div>

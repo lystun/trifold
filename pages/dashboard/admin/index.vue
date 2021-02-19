@@ -94,7 +94,7 @@
                                 <div class="d-flex">
                                     <div>
                                         <div class="icon text-white icon-sm">
-                                            <i class="fas fa-book"></i>
+                                            <i class="fas fa-ad"></i>
                                         </div>
                                     </div>
                                     <div class="pl-4">
@@ -111,7 +111,7 @@
                                 <div class="d-flex">
                                     <div>
                                         <div class="icon text-white icon-sm">
-                                            <i class="fas fa-book"></i>
+                                            <i class="fas fa-users"></i>
                                         </div>
                                     </div>
                                     <div class="pl-4">
@@ -128,7 +128,7 @@
                                 <div class="d-flex">
                                     <div>
                                         <div class="icon text-white icon-sm">
-                                            <i class="fas fa-book"></i>
+                                            <i class="fas fa-user-shield"></i>
                                         </div>
                                     </div>
                                     <div class="pl-4">
@@ -139,7 +139,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </section>

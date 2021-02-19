@@ -42,9 +42,9 @@
                                     <td class="">{{ counsellor.title }}</td>
                                     <td class="">{{ counsellor.createdAt | formatDate }}</td>
                                     <td class="text-white">
-                                        <nuxt-link :to="{ name: 'dashboard-admin-counsellors-id', params:{ id: counsellor._id } }" class="btn-sm btn-warning">
+                                        <!-- <nuxt-link :to="{ name: 'dashboard-admin-counsellors-id', params:{ id: counsellor._id } }" class="btn-sm btn-warning">
                                             <span class="fas fa-edit"></span>
-                                        </nuxt-link>
+                                        </nuxt-link> -->
                                         <a href="#" @click="makeInactive(counsellor._id)" class="btn-sm btn-danger mr-1" v-if="counsellor.active">
                                             <i class="fas fa-user-alt-slash"></i> Deactivate
                                         </a>
