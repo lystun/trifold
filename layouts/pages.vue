@@ -2,7 +2,9 @@
     <div>
         <Header />
         <Nuxt />
+        <Subscriber />
         <Footer />
+        
     </div>
 </template>
 
@@ -10,6 +12,7 @@
     
     import Header from '@/components/nav/Header'
     import Footer from '@/components/nav/Footer'
+    import Subscriber from '@/components/utils/SubscriberModal'
 
     export default {
         data(){
@@ -26,7 +29,8 @@
 
         components: {
             Header,
-            Footer
+            Footer,
+            Subscriber
         },
 
         created(){

@@ -322,7 +322,6 @@
             </div>
         </section>
 
-        <Subscriber />
     </div>
 </template>
 
