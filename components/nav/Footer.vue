@@ -14,14 +14,14 @@
                         </p>
 
                         <div class="mt-5 ctas">
-                            <a href="#cta" type="button" class="btn download hover-translate-y-n3 mr-lg-4 mb-4" data-toggle="modal" data-target="#staticBackdrop">
+                            <a href="#cta" class="btn download hover-translate-y-n3 mr-lg-4 mb-4" data-toggle="modal" data-target="#staticBackdrop">
                                 <i class="fab fa-apple"></i>
                                 <div class="btn-inner">
                                     <span class="btn-inner--text">Download on the</span>
                                     <span class="btn-inner--brand">App Store</span>
                                 </div>
                             </a>
-                            <a href="#cta" type="button" class="btn download hover-translate-y-n3 mb-4" data-toggle="modal" data-target="#staticBackdrop">
+                            <a href="#cta" class="btn download hover-translate-y-n3 mb-4" data-toggle="modal" data-target="#staticBackdrop">
                                 <i class="fab fa-google-play"></i>
                                 <div class="btn-inner">
                                     <span class="btn-inner--text">Download on the</span>
