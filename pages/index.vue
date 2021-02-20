@@ -437,7 +437,7 @@
             }
 
             &__img{
-                display: none;
+                display: block;
             }
         }
 
