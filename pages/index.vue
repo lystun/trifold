@@ -164,7 +164,7 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div>
-                                        <img alt="Image placeholder" src="https://via.placeholder.com/150" class="avatar  rounded-circle">
+                                        <img alt="Image placeholder" src="~/assets/img/avatars/0.png" class="avatar  rounded-circle">
                                     </div>
                                     <div class="pl-3">
                                         <h5 class="h6 mb-0">Queen .O.</h5>
@@ -188,7 +188,7 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div>
-                                        <img alt="Image placeholder" src="https://via.placeholder.com/150" class="avatar  rounded-circle">
+                                        <img alt="Image placeholder" src="~/assets/img/avatars/0.png" class="avatar  rounded-circle">
                                     </div>
                                     <div class="pl-3">
                                         <h5 class="h6 mb-0">Damilola .S.</h5>
@@ -211,7 +211,7 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div>
-                                        <img alt="Image placeholder" src="https://via.placeholder.com/150" class="avatar  rounded-circle">
+                                        <img alt="Image placeholder" src="~/assets/img/avatars/0.png" class="avatar  rounded-circle">
                                     </div>
                                     <div class="pl-3">
                                         <h5 class="h6 mb-0">Mrs. Morenike O.</h5>

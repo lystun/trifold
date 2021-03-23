@@ -69,7 +69,7 @@
                 
                 try {
                     const user = await this.$axios.$post(`/users/get-user`, { email: this.form.email})
-                    
+
                     let destination;
 
                     if(!user){

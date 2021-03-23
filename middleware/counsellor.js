@@ -5,7 +5,7 @@ export default function({store, redirect}) {
         return redirect('/auth/login')
     }
 
-    if(store.state.auth.user.me.role == "admin"){
+    if(store.state.auth.user.role == "admin"){
         return redirect('/dashboard/admin')
     }
 
