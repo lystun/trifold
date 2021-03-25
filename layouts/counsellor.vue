@@ -180,7 +180,8 @@
             },
 
             async getCounsellor(){
-                const user = await this.$axios.$get(`/users/${ this.$store.state.auth.user.me.id }`);
+                const id = (this.$store.state.auth.user.id) ? this.$store.state.auth.user.id  : this.$store.state.auth.user.me.id 
+                const user = await this.$axios.$get(`/users/${ id }`);
                 this.user = user.data.data
                 this.$store.dispatch('counsellors/setCounsellor', ...user.data.data.counsellor)
             },

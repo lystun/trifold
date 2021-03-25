@@ -30,7 +30,7 @@
                     <div class="row">
                         <div class=" col-lg-12">
                             <div class="row align-items-center mb-4">
-                                <Greetings />
+                                <Greetings :name="user.name" />
                             </div>
                             <div class="d-flex navigation">
                                 <nuxt-link to="/dashboard/admin" class="btn btn-icon btn-group-nav shadow btn-neutral">
@@ -178,7 +178,7 @@
         },
 
         created(){
-            this.$nuxt.refresh()
+            this.user = (this.$store.state.auth.user.me) ? this.$store.state.auth.user.me : this.$store.state.auth.user
         },
 
         methods: {

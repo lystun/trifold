@@ -5,8 +5,6 @@
             <p class="text-sm text-muted mb-0">Listed below is a list of scheduled meetings with clients.</p>
         </div>
 
-        
-
         <div class="card bg-gradient-info hover-shadow-lg">
             <div class="card-body py-3">
                 <div class="row row-grid align-items-center">
@@ -28,7 +26,7 @@
                         </nuxt-link>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
         
     </div>

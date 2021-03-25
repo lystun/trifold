@@ -54,7 +54,7 @@
 
                 try {
 
-                    const subscriber = await this.$axios.$post('/subscribers', this.form)
+                    const subscriber = await this.$axios.$put('/subscribers/add', this.form)
 
                     if(subscriber){
                         this.$toast.success('Successful! Thanks for Joining.', {
