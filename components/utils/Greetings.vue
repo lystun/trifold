@@ -51,7 +51,7 @@
                     this.greetings.message = 'Have a nice day!'
                 }else{
                     this.greetings.day = 'Evening'
-                    this.greetings.message = 'Have a nice day!'
+                    this.greetings.message = 'Hope you had a productive day?'
                 }
             },
         }

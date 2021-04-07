@@ -47,6 +47,12 @@
                                         </nuxt-link>
                                     </div>
                                     <div class="btn-group" role="group">
+                                        <nuxt-link to="/dashboard/counsellor/meetings" id="btn-group-settings" type="button" class="btn btn-neutral btn-icon nuxt-link-active exact">
+                                            <span class="btn-inner--icon"><i class="fas fa-list"></i></span>
+                                            <span class="btn-inner--text d-none d-sm-inline-block">Meetings</span>
+                                        </nuxt-link>
+                                    </div>
+                                    <div class="btn-group" role="group">
                                         <nuxt-link to="/dashboard/counsellor/settings" id="btn-group-settings" type="button" class="btn btn-neutral btn-icon nuxt-link-active exact">
                                             <span class="btn-inner--icon"><i class="fas fa-cogs"></i></span>
                                             <span class="btn-inner--text d-none d-sm-inline-block">Settings</span>
@@ -64,7 +70,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="counsellor__profile">
-                                <div class="card card-profile shadow border-0">
+                                <div class="card card-profile shadow">
                                     <div class="card-profile-cover counsellor__profile--banner bg-gradient-primary">
                                         <img alt="" src="~/assets/img/pattern.png" class="counsellor__profile--banner">
                                     </div>
@@ -257,9 +263,16 @@
             position: sticky;
             top: 1rem;
 
+            .card{
+                border: none;
+                border-radius: 1rem;
+            }
+
             &--banner {
                 width: 350px;
                 height: 176px;
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
             }
 
             &--image {

@@ -37,8 +37,8 @@
             </div>
 
             <!-- Professional information -->
-            <div class=" mt-3 delimiter-top">
-                <div class="actions-toolbar py-2 mb-4">
+            <div class="mt-3 delimiter-top">
+                <div class="actions-toolbar py-2">
                     <h5 class="mb-1">Professional Information</h5>
                 </div>
                 <div class="row">
@@ -88,7 +88,7 @@
 
         head(){
             return {
-                title: 'Profile | Trifold'
+                title: 'Counsellor Profile | Trifold'
             }
         },
 
