@@ -34,6 +34,20 @@
                             </nuxt-link>
                         </div>
                     </div>
+
+                    <!-- pagination -->
+                    <div class="my-3">
+                        <div class="d-flex justify-content-between">
+                            <select v-model="perPage" class="custom-select custom-select-sm mr-5">
+                                <option value="10" disabled >Per Page</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                            </select>
+                            <pagination v-model="page" :records="records" :per-page="perPage *1" @paginate="getPosts"/>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -44,7 +58,6 @@
 
 <script>    
     import Subscriber from "../../components/utils/SubscriberModal";
-    import { mapGetters } from "vuex";
 
     export default {
         layout:'pages',
@@ -61,7 +74,10 @@
 
         data(){
             return{
-
+                page: 1,
+                perPage: 10,
+                records: 0,
+                posts: null
             }
         },
 
@@ -71,26 +87,17 @@
             }
         },
 
-        computed:{
-            ...mapGetters({
-                posts: 'posts/getPosts',
-            })
-        },
-
         created(){
-            this.checkPosts();
-            // this.getPosts()
+            this.getPosts()
         },
 
         methods: {
-            checkPosts(){
-                if( Object.entries(this.posts) == 0){
-                    this.getPosts();
-                }
-            },
+
+            
             async getPosts(){
-                let posts = await this.$axios.$get('/posts')
-                this.$store.dispatch('posts/setPosts', posts.data.data)
+                let posts = await this.$axios.$get(`/posts?page=${this.page}&limit=${this.perPage}`)
+                this.records = posts.records
+                this.posts = posts.data.data
             },
 
             truncate(post) {

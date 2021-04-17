@@ -46,6 +46,7 @@ export default {
     plugins: [
         { src: '~/plugins/axios.js' },
         { src: '~/plugins/vue-typed.js' },
+        { src: '~/plugins/vue-paginate.js' },
         { src: "~plugins/vue-quill-editor.js", ssr: false },
         { src: '~/plugins/mixins/user.js' },
         { src: '~/plugins/mixins/validation.js' },
@@ -77,8 +78,8 @@ export default {
     
     // Axios module configuration (https://go.nuxtjs.dev/config-axios)
     axios: {
-        baseURL : "https://trifold-api.herokuapp.com/api/v1/",
-        // baseURL : "http://127.0.0.1:8080/api/v1"
+        // baseURL : "https://trifold-api.herokuapp.com/api/v1/",
+        baseURL : "http://127.0.0.1:8080/api/v1"
     },
     
     auth: {

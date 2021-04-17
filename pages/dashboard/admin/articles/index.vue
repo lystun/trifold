@@ -55,6 +55,19 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <div class="my-3">
+                        <div class="d-flex justify-content-between">
+                            <select v-model="perPage" class="custom-select custom-select-sm mr-5">
+                                <option value="10" disabled >Per Page</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                            </select>
+                            <pagination v-model="page" :records="records" :per-page="perPage *1" @paginate="getArticles"/>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -62,8 +75,6 @@
 </template>
 
 <script>
-
-    import {mapGetters} from 'vuex'
 
     export default {
         layout: 'admin',
@@ -74,11 +85,13 @@
             }
         },
 
-        computed: {
-            ...mapGetters({
-                articles: 'articles/getArticles',
-                categories: 'categories/getCategories',
-            })
+        data(){
+            return{
+                page: 1,
+                perPage: 10,
+                records: 0,
+                articles: null
+            }
         },
         
         filters:{
@@ -94,34 +107,15 @@
         },
 
         created(){
-            this.checkArticles();
-            this.checkCategories()
+            this.getArticles();
         },
 
         methods: {
-            checkArticles(){
-                if( Object.entries(this.articles) == 0){
-                    this.getArticles();
-                }
-            },
-
-            checkCategories(){
-                if( Object.entries(this.categories) == 0){
-                    this.getCategories()
-                }
-            },
-
-            getCategoryName(id){
-                const categoryName = this.categories.find(category => {
-                    return category._id === id
-                })
-
-                return categoryName.name;
-            },
 
             async getArticles(){
-                let articles = await this.$axios.$get('/articles')
-                this.$store.dispatch('articles/setArticles', articles.data.data)
+                const res = await this.$axios.$get(`/articles?page=${this.page}&limit=${this.perPage}`)
+                this.articles = res.data.data
+                this.records = res.records
             },
 
             deleteArticle(id){
@@ -144,11 +138,6 @@
                         location.reload()
                     }
                 })
-            },
-
-            async getCategories(){
-                let categories = await this.$axios.$get('/categories')
-                this.$store.dispatch('categories/setCategories', categories.data.data)
             },
 
         }

@@ -36,7 +36,7 @@
                 </div> 
             </div>
         </div>
-
+        
         <div class="counsellor__schedule">
             <div class="actions-toolbar py-2 mb-4">
                 <h5 class="mb-1">Your Schedule</h5>
