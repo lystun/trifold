@@ -133,7 +133,7 @@
             async getBook(){
                 let book = await this.$axios.$get(`/books/${this.$route.params.id}`)
                 this.form = book.data.data
-                this.form.category = book.data.data.id
+                this.form.category = book.data.data.category.id
             },
             
             checkCategories(){

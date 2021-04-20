@@ -69,6 +69,10 @@
                                         <i class="fas fa-tags mr-2"></i>
                                         <span>Categories</span>
                                     </nuxt-link>
+                                    <nuxt-link to="/dashboard/admin/nudges" class="list-group-item list-group-item-action nuxt-link-active">
+                                        <i class="fas fa-bell mr-2"></i>
+                                        <span>Nudges</span>
+                                    </nuxt-link>
                                     <nuxt-link to="/dashboard/admin/articles" class="list-group-item list-group-item-action nuxt-link-active">
                                         <i class="fas fa-book-reader mr-2"></i>
                                         <span>Articles</span>

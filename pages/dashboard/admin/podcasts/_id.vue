@@ -123,7 +123,7 @@
             async getPodcast(){
                 let podcast = await this.$axios.$get(`/podcasts/${this.$route.params.id}`)
                 this.form = podcast.data.data
-                this.form.category = podcast.data.data.id
+                this.form.category = podcast.data.data.category.id
             },
             
             checkCategories(){

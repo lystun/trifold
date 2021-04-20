@@ -185,10 +185,9 @@
             },
 
             async getCategories(){
-                let categories = await this.$axios.$get('/categories')
+                let categories = await this.$axios.$get('/categories/all-categories')
                 this.$store.dispatch('categories/setCategories', categories.data.data)
             },
-
         }
         
     }

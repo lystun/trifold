@@ -127,7 +127,7 @@
             async getArticle(){
                 let article = await this.$axios.$get(`/articles/${this.$route.params.id}`)
                 this.form = article.data.data
-                this.form.category = article.data.data.id
+                this.form.category = article.data.data.category.id
             },
             
             checkCategories(){

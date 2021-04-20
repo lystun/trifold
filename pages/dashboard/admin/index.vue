@@ -72,6 +72,23 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
+                        <div class="card card-stats bg-primary border-0 hover-shadow-lg hover-translate-y-n3 mb-4 ml-lg-0">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div>
+                                        <div class="icon text-white icon-sm">
+                                            <i class="fas fa-bell"></i>
+                                        </div>
+                                    </div>
+                                    <div class="pl-4">
+                                        <span class="d-block h5 text-white mr-2 mb-1">{{ nudgesCount }} </span>
+                                        <span class="text-white">Nudges</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
                         <div class="card card-stats bg-gradient-danger border-0 hover-shadow-lg hover-translate-y-n3 mb-4 ml-lg-0">
                             <div class="card-body">
                                 <div class="d-flex">
@@ -165,6 +182,8 @@
                 merchantsCount: 0,
                 counsellorsCount: 0,
                 categoriesCount: 0,
+                nudgesCount: 0,
+                assessmentCount: 0,
             }
         },
 
@@ -182,6 +201,7 @@
                 const events = await this.$axios.$get('/events/count')
                 const merchants = await this.$axios.$get('/merchants/count')
                 const counsellors = await this.$axios.$get('/counsellors/count')
+                const nudges = await this.$axios.$get('/nudges/count')
 
                 this.postsCount =  posts.data.data
                 this.articlesCount =  articles.data.data
@@ -190,6 +210,7 @@
                 this.eventsCount =  events.data.data,
                 this.merchantsCount =  merchants.data.data,
                 this.counsellorsCount =  counsellors.data.data,
+                this.nudgesCount =  nudges.data.data,
 
                 this.categoriesCount =  categories.data.data.length
                 this.$store.dispatch('categories/setCategories', categories.data.data)
