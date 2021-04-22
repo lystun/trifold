@@ -197,7 +197,7 @@
                 const podcasts = await this.$axios.$get('/podcasts/count')
                 const books = await this.$axios.$get('/books/count')
                 const posts = await this.$axios.$get('/posts/count')
-                const categories = await this.$axios.$get('/categories')
+                const categories = await this.$axios.$get('/categories/all-categories')
                 const events = await this.$axios.$get('/events/count')
                 const merchants = await this.$axios.$get('/merchants/count')
                 const counsellors = await this.$axios.$get('/counsellors/count')
