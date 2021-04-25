@@ -36,10 +36,44 @@
                 </div>
             </div>
 
+            <!-- Update schedule -->
+            <div class="mt-4 delimiter-top" id="schedule">
+                <div class="actions-toolbar py-2 mb-2">
+                    <h5 class="mb-1">Update Schedule</h5>
+                    <p class="text-sm text-muted mb-0">Select your available day(s) and time.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="form-control-label">Select Date</label>
+                            <input class="form-control" v-model="form.day" type="date" placeholder="Select Date">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="form-control-label">Start Time</label>
+                                    <input class="form-control" v-model="form.start" type="time" placeholder="Start Time">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label class="form-control-label">End Time</label>
+                                    <input class="form-control" v-model="form.end" type="time" placeholder="End Time">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
             <!-- Professional information -->
-            <div class="mt-3 delimiter-top">
-                <div class="actions-toolbar py-2">
+            <div class="mt-4 delimiter-top">
+                <div class="actions-toolbar py-2 mb-2">
                     <h5 class="mb-1">Professional Information</h5>
+                    <p class="text-sm text-muted mb-0">Tell us more about yourself.</p>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -104,7 +138,12 @@
                     phone: '',
                     title: '',
                     description: '',
-                    photo: ''
+                    photo: '',
+
+                    schedule: {},
+                    day: '',
+                    start: '',
+                    end: ''
                 },
 
                 user: {}
@@ -137,6 +176,13 @@
 
                 try {
                     this.form.name =  this.form.fname+' '+this.form.lname;
+
+                    const schedule = {
+                        start_time: this.form.day+'T'+this.form.start+'Z',
+                        end_time: this.form.day+'T'+this.form.end+'Z'
+                    }
+
+                    this.form.schedule.push(schedule)
 
                     await this.$axios.$patch(`/counsellors/${this.counsellor.id}`, this.form)
                     this.loading = false;
