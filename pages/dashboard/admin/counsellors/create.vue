@@ -17,6 +17,18 @@
                             </div>
                             <div class="col-md-12 mb-2">
                                 <div class="form-group">
+                                    <label class="form-control-label">Counsellor Title</label>
+                                    <input class="form-control" v-model="counsellor.title" type="text" placeholder="Counsellor Title" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <div class="form-group">
+                                    <label class="form-control-label">Counsellor Description</label>
+                                    <input class="form-control" v-model="counsellor.description" placeholder="Enter Brief Description" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <div class="form-group">
                                     <label class="form-control-label">Counsellor Gender</label>
                                     <select v-model="form.gender" class="custom-select" required>
                                         <option disabled>Select Gender</option>
@@ -42,6 +54,10 @@
                                     <label class="form-control-label">Confirm Password</label>
                                     <input class="form-control" v-model="form.passwordConfirm" type="password" placeholder="Confirm Password" required>
                                 </div>
+                            </div>
+
+                            <div class="col-md-12 mb-2">
+                                {{ this.err }}
                             </div>
 
                             <div class="col-auto ml-auto">
@@ -83,6 +99,12 @@
                     status: 'counsellor',
                 },
 
+                counsellor: {
+                    title: '',
+                    description: '',
+                },
+
+                err: ''
             }
         },
 
@@ -94,9 +116,14 @@
 
                 try {
                     
-                    await this.$axios.$post('/auth/register', this.form)
-                    this.loading = false;
+                    const newUser =  await this.$axios.$post('/auth/register', this.form)
 
+                    this.counsellor.name = this.form.name,
+                    this.counsellor.user =  newUser.data.user.id,
+                    
+                    await this.$axios.$post('/counsellors', this.counsellor)
+
+                    this.loading = false;
                     this.$toast.success("Counsellor created successfully", {
                         icon : 'check'
                     });
@@ -106,6 +133,7 @@
 
                 } catch (err) {
                     this.loading = false;
+                    this.err = err.message
                 }
             },
 

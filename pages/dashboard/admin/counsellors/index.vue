@@ -5,7 +5,7 @@
                 <div class="row row-grid">
                     <div class="col mb-3">
                         <nuxt-link to="/dashboard/admin/counsellors/create" class="btn btn-sm btn-primary hover-translate-y-n3">Add new counsellor</nuxt-link>
-                        <nuxt-link to="/dashboard/admin/counsellors/pending" class="btn btn-sm btn-primary hover-translate-y-n3">Pending Counsellors </nuxt-link>
+                        <!-- <nuxt-link to="/dashboard/admin/counsellors/pending" class="btn btn-sm btn-primary hover-translate-y-n3">Pending Counsellors </nuxt-link> -->
                     </div>
 
                     <div class="col-md-12 text-center justify-content-center my-5" v-if="!counsellors">
@@ -36,7 +36,7 @@
                                 <tr v-for="(counsellor, index) in counsellors"  :key="index">
                                     <td class="">{{ index+1 }}</td>
                                     <td class="">
-                                        <img :src="counsellor.image" width="50px">
+                                        <img :src="counsellor.user.image" width="50px">
                                     </td>
                                     <td class="">{{ counsellor.user.name }}</td>
                                     <td class="">{{ counsellor.title }}</td>

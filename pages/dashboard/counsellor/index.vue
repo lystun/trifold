@@ -5,13 +5,13 @@
             <p class="text-sm text-muted mb-0">Listed below is a list of upcoming meetings with clients.</p>
         </div>
 
-        <div class="counsellor__meetings mb-5" v-if="!meetings">
-            <div class="card bg-gradient-primary text-white text-center py-5">
-                <h4 class="text-white">You have no Scheduled Meeting(s).</h4>
+        <div class="counsellor__meetings mb-5" v-if="meetings.length == 0">
+            <div class="card bg-gradient-danger text-white text-center py-3">
+                <h5 class="text-white mb-0">You have no Scheduled Meeting(s).</h5>
             </div>
         </div>
 
-        <div class="counsellor__meetings mb-5" v-if="meetings">
+        <div class="counsellor__meetings mb-5" v-if="meetings > 0">
             <div class="card bg-gradient-info hover-shadow-lg" v-for="(meeting, index) in meetings" :key="index">
                 <div class="card-body py-3">
                     <div class="row row-grid align-items-center">
@@ -48,7 +48,7 @@
         </div>
 
         <div class="counsellor__schedules mb-5" v-if="schedules.length == 0">
-            <div class="card bg-gradient-primary text-white text-center py-3">
+            <div class="card bg-gradient-danger text-white text-center py-3">
                 <h5 class="text-white mb-0">You are yet to create any schedule(s).</h5>
             </div>
         </div>
