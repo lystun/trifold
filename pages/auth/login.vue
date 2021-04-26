@@ -78,6 +78,14 @@
                         });
                     }
 
+                    if(user.data.role == "user"){
+                        this.$toast.error('Sorry, you are not authorized to access this page.', {
+                            icon : 'times-circle',
+                        })
+
+                        throw "You're not authorized!";
+                    }
+
                     if(user.data.role == 'counsellor'){
                         destination = '/dashboard/counsellor'
                     }else if(user.data.role == 'admin' ){
@@ -99,6 +107,7 @@
 
                 } catch (err) {
                     this.loading = false
+                    console.log(err)
                 }
             }
         },
