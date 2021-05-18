@@ -39,11 +39,11 @@
 
         <div class="actions-toolbar py-2 mb-2 d-flex">
             <div>
-                <h5 class="mb-1">Your Schedule</h5>
+                <h5 class="mb-1">Your Schedule(s)</h5>
                 <p class="text-sm text-muted mb-0">A list of your available time.</p>
             </div>
             <div class="ml-auto">
-                <nuxt-link to="/dashboard/counsellor/profile#schedule" class="btn btn-sm btn-primary hover-translate-y-n3">Create new schedule</nuxt-link>
+                <nuxt-link to="/dashboard/counsellor/profile#schedule" class="btn btn-sm btn-primary hover-translate-y-n3">Add schedule</nuxt-link>
             </div>
         </div>
 
@@ -57,9 +57,9 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
+                        <th scope="col">Day </th>
                         <th scope="col">Start Time </th>
                         <th scope="col">End Time </th>
-                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody v-if="loading">
@@ -79,14 +79,11 @@
                 </tbody>
                 <tbody v-if="schedules">
                     <tr v-for="(schedule, index) in schedules" :key="index">
-                        <td> {{ $moment(schedule.start_time) }}  </td>
-                        <td> {{ $moment(schedule.end_time) }}  </td>
-                        
-                        <td class="text-white">
-                            <a href="#" @click="deleteSchedule(index)" class="btn-sm btn-danger" title="Move to trash">
-                                <i class="fas fa-trash"></i>
-                            </a>
-                        </td>
+                        <template v-if="schedule.start_time || schedule.end_time !== '' ">
+                            <td> {{ schedule.day }} </td>
+                            <td> {{ tConv24(schedule.start_time) }}  </td>
+                            <td> {{ tConv24(schedule.end_time) }}  </td>
+                        </template>
                     </tr>
                 </tbody>
             </table>
@@ -122,7 +119,6 @@
         methods:{
             //get counsellor's meetings
             async getCounsellorMeetings(){
-
                 let counsellor_id;
 
                 //get counsellor id either from the vuex store or fetch from the counsellor info user the user endpoint
@@ -202,6 +198,16 @@
                         // location.reload()
                     }
                 })
+            },
+
+            tConv24(time24) {
+                var ts = time24;
+                var H = +ts.substr(0, 2);
+                var h = (H % 12) || 12;
+                h = (h < 10)?("0"+h):h;  // leading 0 at the left for 1 digit hours
+                var ampm = H < 12 ? " AM" : " PM";
+                ts = h + ts.substr(2, 3) + ampm;
+                return ts;
             },
         }
     }
