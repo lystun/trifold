@@ -330,15 +330,6 @@
                 },
 
                 schedules: [],
-                schedules: [
-                    { day: "Sunday", start_time: "20:00", end_time: "21:00", timeChunks: [] },
-                    { day: "Monday", start_time: "13:00", end_time: "16:00", timeChunks: ["13:00","14:00","15:00"] },
-                    { day: "Tuesday", start_time: "", end_time: "", timeChunks: [] },
-                    { day: "Wednesday", start_time: "13:00", end_time: "16:00", timeChunks: ["13:00","14:00","15:00"] },
-                    { day: "Thursday", start_time: "15:00", end_time: "18:00", timeChunks: [] },
-                    { day: "Friday", start_time: "12:00", end_time: "15:00", timeChunks: [] },
-                    { day: "Saturday", start_time: "18:00", end_time: "22:00", timeChunks: [] },
-                ],
                 user: {},
                 err: ""
             }
