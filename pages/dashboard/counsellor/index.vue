@@ -11,8 +11,8 @@
             </div>
         </div>
 
-        <div class="counsellor__meetings mb-5" v-if="meetings > 0">
-            <div class="card bg-gradient-info hover-shadow-lg" v-for="(meeting, index) in meetings" :key="index">
+        <div class="counsellor__meetings mb-5" v-if="meetings.length > 0">
+            <div class="card bg-gradient-primary hover-shadow-lg" v-for="(meeting, index) in meetings" :key="index">
                 <div class="card-body py-3">
                     <div class="row row-grid align-items-center">
                         <div class="col-lg-8">
@@ -48,7 +48,7 @@
         </div>
 
         <div class="counsellor__schedules mb-5" v-if="schedules.length == 0">
-            <div class="card bg-gradient-danger text-white text-center py-3">
+            <div class="card bg-secondary text-white text-center py-3">
                 <h5 class="text-white mb-0">You are yet to create any schedule(s).</h5>
             </div>
         </div>
@@ -129,7 +129,7 @@
                 if(this.$store.state.counsellors.counsellor.id){
                     counsellor_id = this.$store.state.counsellors.counsellor.id
                 }else {
-                    const user = await this.$axios.$get(`/users/${ this.$store.state.auth.user.me.id }`);
+                    const user = await this.$axios.$get(`/users/${ this.$store.state.auth.user.id }`);
                     counsellor_id = user.data.data.counsellor[0].id           
                 }
 
@@ -152,7 +152,7 @@
                 if(this.$store.state.counsellors.counsellor.id){
                     counsellor_id = this.$store.state.counsellors.counsellor.id
                 }else {
-                    const user = await this.$axios.$get(`/users/${ this.$store.state.auth.user.me.id }`);
+                    const user = await this.$axios.$get(`/users/${ this.$store.state.auth.user.id }`);
                     counsellor_id = user.data.data.counsellor[0].id           
                 }
 
