@@ -18,7 +18,8 @@
                         <nuxt-link class="nav-link nuxt-link-active exact" to="/blog" >Blog</nuxt-link>
                     </li>
                     <li class="nav-item mr-0 ">
-                        <a href="#cta" type="button" class="btn btn-sm btn-white d-none d-lg-inline-flex" data-toggle="modal" data-target="#staticBackdrop">
+                        <!-- <a href="https://play.google.com/store/apps/details?id=com.elab.trifold" type="button" class="btn btn-sm btn-white d-none d-lg-inline-flex" data-toggle="modal" data-target="#staticBackdrop"> -->
+                        <a href="https://play.google.com/store/apps/details?id=com.elab.trifold" type="button" class="btn btn-sm btn-white d-none d-lg-inline-flex">
                             <span class="btn-inner--text">Download</span>
                         </a>
                     </li>
